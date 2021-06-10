@@ -1,0 +1,183 @@
+:root {
+    --fuente-primaria: Montserrat, sans-serif;
+    --danger-custom: #F53756;
+    --success-custom: #4cb8b3;
+    --success-hover: #3ca8a2;
+    --warning-custom: #fef46d;
+    --warning-hover: #eae05b;
+    --secundary-custom: #752f97;
+}
+
+.bg-danger {
+    background-color: var(--danger-custom) !important;
+}
+
+.bg-success {
+    background-color: var(--success-custom) !important;
+}
+
+.bg-warning {
+    background-color: var(--warning-custom) !important;
+}
+
+.bg-secundary {
+    background-color: var(--secundary-custom) !important;
+}
+
+body {    
+    font-family: var(--fuente-primaria);        
+}
+
+/* navbar */
+#navegacion-principal {
+    transition: all .9s ease;
+}
+
+#navegacion-principal.bg-success {
+    -webkit-box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.58); 
+    box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.58);
+}
+
+a.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+a.navbar-brand span { 
+    font-weight: 700;
+}
+
+#navegacion-principal a.nav-link {
+    color: #FFFFFF;
+}
+
+#navegacion-principal a.active {
+    background-color: #752f97;
+}
+
+/* Video header */
+.contenedor-header {
+    position: relative;
+    background-image: url(../img/banda.jpg);
+    background-position: center center;
+    height: 50rem;
+}
+
+.informacion-concierto {
+    position: absolute;
+    z-index: 100;
+    top:20%;
+}
+
+.contenedor-header::after {
+    content: '';
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;    
+    position: absolute;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a81a39+0,8f0222+45,a81a39+100&0.5+0,0.5+100 */
+    background: -moz-linear-gradient(-45deg,  rgba(168,26,57,0.5) 0%, rgba(143,2,34,0.5) 45%, rgba(168,26,57,0.5) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(168,26,57,0.5) 0%,rgba(143,2,34,0.5) 45%,rgba(168,26,57,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(168,26,57,0.5) 0%,rgba(143,2,34,0.5) 45%,rgba(168,26,57,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80a81a39', endColorstr='#80a81a39',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.informacion-concierto h1 {
+    font-size: 3rem;
+    line-height: 6rem;
+}
+
+.informacion-concierto h1 span,
+.informacion-concierto p {
+    font-weight: 700;
+    -webkit-box-shadow: 0px 0px 25px -4px rgba(0,0,0,0.46); 
+    box-shadow: 0px 0px 25px -4px rgba(0,0,0,0.46);  
+}
+
+.informacion-concierto p {
+    font-size: 2rem;
+}
+
+.informacion-concierto .text-dark,
+.sobre-festival .text-dark {
+    color: var(--danger-custom) !important;
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .contenedor-header::after {
+        display: none;
+    }    
+}
+
+@media (min-width: 992px) {
+    .contenedor-header {
+        background-image: unset;
+        height: auto;
+    } 
+    
+    .informacion-concierto h1 {
+        font-size: 4rem;
+        line-height: unset;
+        top: 35%;
+    }
+}
+
+.separador::after {
+    content: '';
+    display: block;
+    height: 120px;
+    width:300px;
+    margin: 0 auto;
+    background-position: center center;
+    background-size: 120px;
+    background-repeat: no-repeat
+}
+
+.rock::after {
+    background-image: url(../img/guitarra.png);
+}
+
+.top-artist::after {
+    background-image: url(../img/dj.png);
+}
+
+.horario.bg-success li:nth-child(2n+2) {
+    background-color: var(--success-hover);
+}
+
+.horario.bg-warning li:nth-child(2n+2) {
+    background-color: var(--warning-hover);
+}
+
+#fecha {
+    font-size:  2.4rem;
+}
+
+#fecha span {
+    font-weight: 700;
+}
+
+#fecha span::before {
+    content: '- ';
+}
+
+#fecha span:first-child::before {
+    display: none;
+}
+
+/* Boletos */
+.boletos .active {
+    background-color: #752f97 !important;
+    border-color: #752f97 !important;
+}
+
+.boletos .precio {
+    font-size: 2rem;
+    background-color: var(--success-custom);
+    border-color: var(--success-custom) !important;
+}
+
+
+
